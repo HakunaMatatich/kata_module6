@@ -10,7 +10,7 @@
     "webpack"
   ],
   "license": "ISC",
-  "author": "Kata Academy",
+  "author": "Artem Garii",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",

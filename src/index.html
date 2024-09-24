@@ -1,16 +1,324 @@
+<!-- https://hakunamatatich.github.io/ -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="index.css" />
+    <title>Module 6</title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <div class="container-main-info">
+      <header class="upper-menu">
+        <div class="upper-menu--left-side">
+          <div class="upper-menu__burger-btn-container">
+            <button class="btn btn--burger btn--hover-opacity-scale"> </button>
+          </div>
+          <div class="upper-menu__group-ic">
+            <img src="img/Group.svg" alt="" />
+          </div>
+        </div>
+        <div class="upper-menu__container">
+          <div class="upper-menu--middle-side">
+            <div class="upper-menu__call-btn-container">
+              <button class="btn btn--call btn--hover-opacity-scale"> </button>
+            </div>
+            <div class="upper-menu__chat-btn-container">
+              <button class="btn btn--chat btn--hover-opacity-scale"> </button>
+            </div>
+            <div class="upper-menu__profile-btn-container">
+              <button class="btn btn--profile btn--hover-opacity-scale">
+              </button>
+            </div>
+            <div class="upper-menu__divider">
+              <img src="img/divider.svg" />
+            </div>
+          </div>
+          <div class="upper-menu--right-side">
+            <div class="upper_menu__repair-btn-container">
+              <button class="btn btn--repair btn--hover-opacity-scale">
+              </button>
+            </div>
+            <div class="upper_menu__checkstatus-btn-container">
+              <button class="btn btn--checkstatus btn--hover-opacity-scale">
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main-content">
+        <div class="title-container">
+          <div class="title">
+            <h1 class="title__text">Услуги и сервисы</h1>
+          </div>
+          <div class="main__title-icons icons">
+            <div class="main__ic-repair i-container">
+              <label for="repair">Оставить заявку</label>
+              <input
+                class="btn btn--repair btn--hover-opacity-scale"
+                type="button"
+                name="repair"
+                id="repair"
+              />
+            </div>
+            <div class="main__ic-checkstatus i-container">
+              <label for="checkstatus">Статус ремонта</label>
+              <input
+                class="btn btn--checkstatus btn--hover-opacity-scale"
+                type="button"
+                name="checkstatus"
+                id="checkstatus"
+              />
+            </div>
+          </div>
+        </div>
+        <nav class="main">
+          <ul class="u-list">
+            <li class="u-list__item-1 item"
+              ><a class="u-list__link" href="#">Ремонтируемые бренды</a></li
+            >
+            <li class="u-list__item-2 item"
+              ><a class="u-list__link" href="#">Ремонтируемые устройства</a></li
+            >
+            <li class="u-list__item-3 item"
+              ><a class="u-list__link" href="#">Цены на услуги</a></li
+            >
+            <li class="u-list__item-4 item"
+              ><a class="u-list__link" href="#">Адреса сервисных центров</a></li
+            >
+            <li class="u-list__item-5 item"
+              ><a class="u-list__link" href="#">Специальные цены</a></li
+            >
+            <li class="u-list__item-6 item"
+              ><a class="u-list__link" href="#">Отзывы</a></li
+            >
+          </ul>
+        </nav>
+        <div class="content">
+          <div class="content__container">
+            <p class="content__text-1 con-text"
+              >Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.<br /><br />
+              <!-- </p> -->
+
+              <!-- <p class="content__text-2 con-text"> -->
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</p
+            >
+
+            <div class="content__read-next read-next">
+              <input
+                class="read-next__icon"
+                type="button"
+                name="read_next"
+                id="read_next"
+              />
+              <label for="read_next">Читать далее</label>
+            </div>
+          </div>
+          <img class="content__img" src="img/logo_img.jpg" />
+        </div>
+      </main>
+    </div>
+
+    <div class="swiper-container-brands">
+      <div class="swiper-container-brands__header-title"
+        >Ремонт техники различных брендов</div
+      >
+
+      <div class="swiper-brands swiper">
+        <div
+          class="swiper-brands__wrapper swiper-brands__wrapper--overflow-hidden swiper-wrapper"
+        >
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/lenovo.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/samsung.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/apple.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/viewSonic.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/bosh.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/hp.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/acer.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/sony.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/lenovo.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/samsung.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+          <div class="swiper-brands__slide swiper-slide">
+            <a class="swiper-brands__link" href="#"
+              ><img src="img/apple.svg" alt="" />
+              <div class="swiper-brands__btn"></div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-brands__pagination swiper-pagination"></div>
+        <button class="swiper-brands__show-all-btn show-all-btn">
+          <div
+            class="show-all-btn__ic-expand show-all-btn__ic-expand--top"
+          ></div>
+          <div class="show-all-btn__text">Показать все</div>
+        </button>
+        <button class="swiper-brands__hide-btn hide-btn btn--hidden">
+          <div class="hide-btn__ic-expand hide-btn__ic-expand--bottom"></div>
+          <div class="hide-btn__text">Скрыть</div>
+        </button>
+      </div>
+    </div>
+
+    <div class="container-left-slide container-left-slide--close">
+      <div class="container-header">
+        <header class="header">
+          <div class="header__container-icons">
+            <div class="header__burger-close-btn-container">
+              <button class="btn btn--burger-close btn--transform-rotate">
+              </button>
+            </div>
+            <div class="header__group-icon">
+              <img src="img/Group.svg" alt="" />
+            </div>
+          </div>
+          <div class="header__search-btn-container">
+            <button class="btn btn--hover-opacity-scale btn--search"> </button>
+          </div>
+        </header>
+        <main class="list-container">
+          <ul class="list-servise">
+            <li class="item"
+              ><a class="link-style--hover-effect" href="#"
+                >Ремонт техники</a
+              ></li
+            >
+            <li class="item"
+              ><a class="link-style--hover-effect" href="#"
+                >Услуги и сервисы</a
+              ></li
+            >
+            <li class="item"
+              ><a class="link-style--hover-effect" href="#"
+                >Корпоративным клиентам</a
+              ></li
+            >
+            <li class="item"
+              ><a class="link-style--hover-effect" href="#"
+                >Продавцам техники</a
+              ></li
+            >
+            <li class="item"
+              ><a class="link-style--hover-effect" href="#">Партнерам</a></li
+            >
+            <li class="item"
+              ><a class="link-style--hover-effect" href="#"
+                >Производителям</a
+              ></li
+            >
+            <li class="item"
+              ><a class="link-style--hover-effect" href="#"
+                >Наши сервисные центры</a
+              ></li
+            >
+            <li class="item"
+              ><a class="link-style--hover-effect" href="#">Контакты</a></li
+            >
+          </ul>
+        </main>
+      </div>
+      <div class="container-footer">
+        <footer class="footer">
+          <div class="fotter__container-icons">
+            <div class="fotter__call-btn-contaner">
+              <button class="btn btn--call btn--hover-opacity-scale"></button>
+            </div>
+            <div class="fotter__chat-btn-container">
+              <button class="btn btn--chat btn--hover-opacity-scale"></button>
+            </div>
+            <div class="fotter__profile-btn-container">
+              <button
+                class="btn btn--profile btn--hover-opacity-scale"
+              ></button>
+            </div>
+          </div>
+          <div class="fotter__email">
+            <a class="link-style--hover-effect" href="#">mail@cps.com</a>
+          </div>
+          <div class="footer__number">
+            <a class="link-style--hover-effect" href="#">8 800 890 8900</a>
+          </div>
+          <div class="fotter__lang">
+            <ul class="fotter__list">
+              <li
+                ><a class="link-style--hover-effect" href="#" class="ru"
+                  >RU</a
+                ></li
+              >
+              <li
+                ><a class="link-style--hover-effect" href="#" class="en"
+                  >EN</a
+                ></li
+              >
+              <li
+                ><a class="link-style--hover-effect" href="#" class="ch"
+                  >CH</a
+                ></li
+              >
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

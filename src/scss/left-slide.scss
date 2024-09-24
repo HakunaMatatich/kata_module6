@@ -1,0 +1,165 @@
+$whiteColor: #ffffff;
+
+.container-left-slide {
+  min-width: 320px;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container-left-slide--close {
+  display: none;
+}
+
+a {
+  color: #1b1c21;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.header__container-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item {
+  padding: 15px 20px;
+  position: relative;
+}
+
+.link-style--hover-effect {
+  display: inline-block;
+  transition: color 0.5s ease;
+}
+
+.link-style--hover-effect:hover {
+  color: #7e7e82;
+}
+
+.list-servise {
+  .item::before {
+    content: '';
+    background-image: url(../img/highlight.svg);
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.item:hover::before {
+  opacity: 1;
+}
+
+.footer {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fotter__container-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.container-footer {
+  margin-bottom: 20px;
+}
+
+.fotter__lang {
+  margin-top: 30px;
+}
+
+.fotter__lang > a {
+  display: inline-block;
+}
+
+.fotter__list {
+  display: flex;
+  gap: 7px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff3e79;
+}
+
+.btn--burger {
+  background-image: url('../img/burger.svg');
+}
+
+.btn--transform-rotate {
+  transition: transform 0.3s ease;
+}
+
+.btn--transform-rotate:hover {
+  transform: rotate(90deg);
+}
+
+.btn--search {
+  background-image: url('../img/search.svg');
+}
+
+.btn--call {
+  background-image: url('../img/call.svg');
+}
+
+.btn--chat {
+  background-image: url('../img/chat.svg');
+}
+
+.btn--profile {
+  background-image: url('../img/profile.svg');
+}
+
+.btn--repair {
+  background-image: url('../img/repair.svg');
+}
+
+.btn--checkstatus {
+  background-image: url('../img/checkstatus.svg');
+}
+
+.btn--burger {
+  background-image: url('../img/burger.svg');
+}
+
+.btn--burger-close {
+  background-image: url('../img/burger-close.svg');
+}
+
+.btn--hover-opacity-scale {
+  transition: opacity 0.5s ease, transform 0.5s ease-in-out;
+}
+
+.btn--hover-opacity-scale:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.footer__number {
+  font-size: 24px;
+  line-height: 32px;
+}
