@@ -1,0 +1,84 @@
+.feedback,
+.callback {
+  min-width: 320px;
+  max-width: 440px;
+  height: 100vh;
+  background-color: $whiteColor;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .feedback__send-link--align-end,
+  .callback__send-link--align-end {
+    align-self: flex-end;
+  }
+
+  .title__input {
+    height: 48px;
+    padding: 10px;
+    border: 1px solid $lightGray;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .feedback__title::before,
+  .callback__title::before {
+    top: 10%;
+    left: 0;
+  }
+
+  .title__input--size-bigger {
+    height: 118px;
+  }
+
+  .feedback__send-btn,
+  .callback__send-btn {
+    width: 136px;
+    height: 32px;
+    background-image: url(../img/send.svg);
+  }
+
+  .feedback__text,
+  .callback__text {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+  }
+
+  .feedback__title-text,
+  .callback__title-text {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: left;
+  }
+
+  .feedback__link,
+  .callback__link {
+    color: $redColor;
+  }
+
+  @media (min-width: 1120px) {
+    .feedback__btn-close,
+    .callback__btn-close {
+      display: block;
+      position: absolute;
+      top: 22px;
+      left: -70px;
+    }
+
+    .feedback__title::before,
+    .callback__title::before {
+      top: 22px;
+    }
+  }
+}
+
+.feedback--close,
+.callback--close {
+  display: none;
+}

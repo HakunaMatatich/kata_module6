@@ -1,0 +1,44 @@
+.swiper-container-repair {
+  .swiper-repair__slide {
+    max-height: 160px;
+    max-width: 240px;
+    margin-bottom: 15px;
+  }
+
+  .swiper-repair {
+    padding: 20px;
+  }
+
+  .swiper-repair__link {
+    height: 160px;
+    min-width: 240px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .swiper-repair__btn {
+    align-self: flex-end;
+  }
+
+  @media (min-width: 768px) {
+    .swiper-repair__wrapper {
+      display: grid;
+      gap: 10px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1365px) {
+    .swiper-repair__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+  }
+
+  @media (min-width: 1120px) {
+    .swiper-repair__wrapper {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+  }
+}

@@ -53,5 +53,6 @@
     "plugins": {
       "autoprefixer": {}
     }
-  }
+  },
+  "dependencies": {}
 }

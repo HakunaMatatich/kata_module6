@@ -1,9 +1,18 @@
 $whiteColor: #fff;
 $redColor: #ff3e79;
 $backColor: #f8f8f8;
+$fontColorGray: #7e7e82;
+$lightGray: #eaeaea;
 
 @import 'left-slide.scss';
+@import 'price-table.scss';
+@import 'swiper-brands.scss';
+@import 'swiper-repair.scss';
+@import 'swiper-price.scss';
 @import 'swiper.scss';
+@import 'all-content-position.scss';
+@import 'footer.scss';
+@import 'feedback-module.scss';
 
 @font-face {
   font-family: 'TT Lakes';
@@ -12,6 +21,17 @@ $backColor: #f8f8f8;
     url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
     url('../fonts/TTLakes-Medium.woff') format('woff'),
     url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes light';
+  src: url('../fonts/TTLakes-Light.eot');
+  src: local('TT Lakes Light'), local('TTLakes-Light'),
+    url('../fonts/TTLakes-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Light.woff') format('woff'),
+    url('../fonts/TTLakes-Light.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -62,7 +82,7 @@ body {
   width: 3px;
   margin-left: -10px;
   margin-top: 11px;
-  background-color: #eaeaea;
+  background-color: $lightGray;
 }
 
 .upper-menu__ic-burger {
@@ -133,14 +153,13 @@ body {
 }
 
 .u-list__link {
-  color: #7e7e82;
+  color: $fontColorGray;
 }
 
 .content {
   margin: 25px 15px;
   display: flex;
   flex-direction: column;
-
   gap: 20px;
 }
 
@@ -175,10 +194,6 @@ body {
   height: auto;
 }
 
-.content__text-2 {
-  overflow: hidden;
-}
-
 .upper-menu--middle-side {
   display: none;
 }
@@ -187,7 +202,15 @@ body {
   display: none;
 }
 
-@media (min-width: 760px) and (max-width: 1119px) {
+.main-content-container--blur {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+@media (min-width: 760px) and (max-width: 1365px) {
   .upper-menu__group-ic::after {
     content: '';
     position: absolute;
@@ -195,7 +218,7 @@ body {
     width: 3px;
     margin-left: 10px;
     margin-top: 11px;
-    background-color: #eaeaea;
+    background-color: $lightGray;
   }
 
   .upper-menu__group-ic::before {
@@ -234,7 +257,7 @@ body {
   }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1366px) {
   .content {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -292,5 +315,20 @@ body {
     background-repeat: no-repeat;
     background-color: $redColor;
     border: none;
+  }
+}
+
+@media (min-width: 1366px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content__container {
+    flex-basis: 55%;
+  }
+
+  .content__img {
+    flex-basis: 45%;
   }
 }

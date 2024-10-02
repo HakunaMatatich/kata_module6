@@ -12,6 +12,7 @@ $whiteColor: #ffffff;
   justify-content: space-between;
   font-size: 16px;
   line-height: 24px;
+  z-index: 10;
 }
 
 .container-left-slide--close {
@@ -46,7 +47,7 @@ a {
 }
 
 .link-style--hover-effect:hover {
-  color: #7e7e82;
+  color: $fontColorGray;
 }
 
 .list-servise {
@@ -162,4 +163,10 @@ a {
 .footer__number {
   font-size: 24px;
   line-height: 32px;
+}
+
+@media (min-width: 1366px) {
+  .header__burger-close-btn-container {
+    display: none;
+  }
 }
