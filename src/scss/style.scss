@@ -4,7 +4,7 @@ $backColor: #f8f8f8;
 $fontColorGray: #7e7e82;
 $lightGray: #eaeaea;
 
-@import 'left-slide.scss';
+@import 'left-slide-menu.scss';
 @import 'price-table.scss';
 @import 'swiper-brands.scss';
 @import 'swiper-repair.scss';
@@ -12,7 +12,7 @@ $lightGray: #eaeaea;
 @import 'swiper.scss';
 @import 'all-content-position.scss';
 @import 'footer.scss';
-@import 'feedback-module.scss';
+@import 'modules.scss';
 
 @font-face {
   font-family: 'TT Lakes';
@@ -125,6 +125,7 @@ body {
 .u-list {
   display: flex;
   text-wrap: nowrap;
+  flex-wrap: wrap;
   margin-left: 20px;
   overflow-x: auto;
   padding: 0;

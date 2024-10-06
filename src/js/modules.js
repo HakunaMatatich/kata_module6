@@ -21,47 +21,55 @@ let upperMenuCental = mainContainer.querySelector('.upper-menu__container')
 burgerClose.addEventListener('click', () => {
   leftSlideContainer.classList.add('container-left-slide--close')
   mainContainer.classList.remove('main-content-container--blur')
+  document.body.classList.remove('body--overflow-hidden')
 })
 
 burgerOpen.addEventListener('click', () => {
   leftSlideContainer.classList.remove('container-left-slide--close')
   mainContainer.classList.add('main-content-container--blur')
+  document.body.classList.add('body--overflow-hidden')
 })
 
 // feedback module
 feedbackBtnClose.addEventListener('click', () => {
   feedbackContainer.classList.add('feedback--close')
   mainContainer.classList.remove('main-content-container--blur')
+  document.body.classList.remove('body--overflow-hidden')
 })
 
 callBtnMain.addEventListener('click', () => {
   feedbackContainer.classList.remove('feedback--close')
   mainContainer.classList.add('main-content-container--blur')
   callbackContainer.classList.add('callback--close')
+  document.body.classList.add('body--overflow-hidden')
 })
 
 callBtnLeftSide.addEventListener('click', () => {
   feedbackContainer.classList.remove('feedback--close')
   mainContainer.classList.add('main-content-container--blur')
   callbackContainer.classList.add('callback--close')
+  document.body.classList.add('body--overflow-hidden')
 })
 
 // callback module
 callbackBtnClose.addEventListener('click', () => {
   callbackContainer.classList.add('callback--close')
   mainContainer.classList.remove('main-content-container--blur')
+  document.body.classList.remove('body--overflow-hidden')
 })
 
 chatBtnMain.addEventListener('click', () => {
   callbackContainer.classList.remove('callback--close')
   mainContainer.classList.add('main-content-container--blur')
   feedbackContainer.classList.add('feedback--close')
+  document.body.classList.add('body--overflow-hidden')
 })
 
 chatBtnLeftSide.addEventListener('click', () => {
   callbackContainer.classList.remove('callback--close')
   mainContainer.classList.add('main-content-container--blur')
   feedbackContainer.classList.add('feedback--close')
+  document.body.classList.add('body--overflow-hidden')
 })
 
 // close modules
@@ -73,5 +81,6 @@ mainContainer.addEventListener('click', (e) => {
     mainContainer.classList.remove('main-content-container--blur')
     feedbackContainer.classList.add('feedback--close')
     callbackContainer.classList.add('callback--close')
+    document.body.classList.remove('body--overflow-hidden')
   }
 })
